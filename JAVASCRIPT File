@@ -1,0 +1,19 @@
+// Function to append values to the display
+function appendToDisplay(value) {
+    document.getElementById("display").value += value;
+}
+
+// Function to clear the display
+function clearDisplay() {
+    document.getElementById("display").value = '';
+}
+
+// Function to calculate the result
+function calculate() {
+    const display = document.getElementById("display");
+    try {
+        display.value = eval(display.value); // eval evaluates the expression entered in the display
+    } catch (error) {
+        display.value = 'Error'; // If there's an error (e.g., invalid expression), show "Error"
+    }
+}
